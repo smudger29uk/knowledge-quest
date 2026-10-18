@@ -76,8 +76,8 @@
   .sectlabel .hint{color:var(--muted);font-size:12.5px}
 
   /* avatar picker */
-  .avatars{display:flex;gap:10px;overflow-x:auto;padding:6px 2px 4px;-webkit-overflow-scrolling:touch}
-  .av{flex:none;width:54px;height:54px;border-radius:14px;background:var(--surface);border:2px solid var(--line-hi);font-size:27px;display:flex;align-items:center;justify-content:center}
+  .avatars{display:grid;grid-template-columns:repeat(auto-fill,minmax(54px,1fr));gap:10px;justify-items:center;padding:6px 2px 4px}
+  .av{width:54px;height:54px;border-radius:14px;background:var(--surface);border:2px solid var(--line-hi);font-size:27px;display:flex;align-items:center;justify-content:center}
   .av.sel{border-color:var(--gold);background:var(--surface-hi);box-shadow:0 0 0 3px rgba(255,194,75,.20)}
 
   /* journey map */
@@ -356,7 +356,7 @@
       <div class="badge-lg">🧠</div>
       <div class="kicker">GCSE Dungeon Quest</div>
       <h1>Descend the<br>dungeon</h1>
-      <p>Quiz yourself on everything in your Macbeth and A Christmas Carol revision booklets — and find out the <em>why</em> behind every answer.</p>
+      <p>Quiz yourself on everything in your GCSE revision booklets — and find out the <em>why</em> behind every answer.</p>
     </div>
     <div class="namebox">
       <label for="nameInput">What should I call you?</label>
@@ -435,7 +435,7 @@
     </div>
 
     <button class="btn ghost" id="settingsBtn" style="margin-top:22px">⚙︎ Change name or reset progress</button>
-    <footer>Built from your AQA Paper 1 revision booklets · works offline</footer>
+    <footer>Built from your AQA revision booklets · works offline</footer>
   </section>
 
   <!-- QUIZ -->
@@ -808,7 +808,7 @@ const SUBJECTS = [
    ============================================================ */
 function SUBJ(id){ return SUBJECTS.find(s=>s.id===id); }
 const ADVENTURES=[
- {id:"gcse-lit1", title:"GCSE English Literature · Paper 1", period:"Macbeth & A Christmas Carol", ready:true, regions:[
+ {id:"gcse-lit1", title:"GCSE English Literature · Paper 1", period:"AQA exam revision", ready:true, regions:[
    {name:"Shakespeare's Scotland", scenery:"🏰", c:"#FF6B7A", ids:["macbeth"]},
    {name:"Dickens' London", scenery:"🎄", c:"#46D6A0", ids:["carol"]}
  ]}
